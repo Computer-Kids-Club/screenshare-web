@@ -79,7 +79,7 @@
     margin: 0px 0px 0px 100px;
     bottom: 0px;
     position: absolute;
-    width: 100%;
+    width: calc(100% - 120px);
 }
 
 body {
