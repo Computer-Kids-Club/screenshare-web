@@ -1,4 +1,4 @@
-const WS_URL = "wss://screenshare.pro";
+const WS_URL = "wss://screenshare.pro/ws/";
 const WATCH_URL = "https://screenshare.pro/";
 
 const RES_COMPRESSION = 0.5;
