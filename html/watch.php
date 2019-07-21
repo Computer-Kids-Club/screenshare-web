@@ -24,11 +24,6 @@ $current_page = "watch";
     ?>
 
     <div class="content-wrapper">
-      <div class="content-header">
-        <h1>
-          Watch
-        </h1>
-      </div>
 
       <div class="content">
 
