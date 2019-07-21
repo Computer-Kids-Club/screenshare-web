@@ -71,12 +71,12 @@
 }
 
 .content {
-    width: 90%;
+    width: 80%;
     margin: auto;
 }
 
 #stream_video {
-    width: 90%;
+    width: 100%;
 }
 
 .main-footer {
