@@ -24,17 +24,17 @@ $current_page = "watch";
     ?>
 
     <div class="content-wrapper">
-      <section class="content-header">
+      <div class="content-header">
         <h1>
           Watch
         </h1>
-      </section>
+      </div>
 
-      <section class="content">
+      <div class="content">
 
-        <video id="stream_video" playsinline autoplay></video>
+        <video id="stream_video" playsinline controls autoplay></video>
 
-      </section>
+      </div>
 
     </div>
 
