@@ -19,21 +19,11 @@ $current_page = "watch";
 
 <body>
   <div class="wrapper">
-
     <div class="content-wrapper">
-
-      <div class="content">
-
+      <!-- <div class="content"> -->
         <video id="stream_video" playsinline controls autoplay></video>
-
-      </div>
-
+      <!-- </div> -->
     </div>
-
-    <!-- <footer class="main-footer"> -->
-      <!-- <strong>Copyright &copy; 2019 Screenshare.Pro.</strong> All rights reserved. -->
-    <!-- </footer> -->
-
   </div>
 
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
