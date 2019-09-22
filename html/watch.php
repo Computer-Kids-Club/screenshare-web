@@ -18,13 +18,13 @@ $current_page = "watch";
 </head>
 
 <body>
-  <div class="wrapper">
-    <div class="content-wrapper">
+  <!-- <div class="wrapper"> -->
+    <!-- <div class="content-wrapper"> -->
       <!-- <div class="content"> -->
         <video id="stream_video" playsinline controls autoplay></video>
       <!-- </div> -->
-    </div>
-  </div>
+    <!-- </div> -->
+  <!-- </div> -->
 
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
 
