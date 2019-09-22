@@ -33,9 +33,9 @@ $current_page = "watch";
 
     </div>
 
-    <footer class="main-footer">
-      <strong>Copyright &copy; 2019 Screenshare.Pro.</strong> All rights reserved.
-    </footer>
+    <!-- <footer class="main-footer"> -->
+      <!-- <strong>Copyright &copy; 2019 Screenshare.Pro.</strong> All rights reserved. -->
+    <!-- </footer> -->
 
   </div>
 
