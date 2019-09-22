@@ -21,7 +21,7 @@ $current_page = "watch";
   <!-- <div class="wrapper"> -->
     <!-- <div class="content-wrapper"> -->
       <!-- <div class="content"> -->
-        <video id="stream_video" style="width: 84%; margin: 3% 8%" playsinline controls autoplay></video>
+        <video id="stream_video" style="width: 70%; margin: 3% 15%" playsinline controls autoplay></video>
       <!-- </div> -->
     <!-- </div> -->
   <!-- </div> -->
