@@ -5,7 +5,7 @@ $current_page = "watch";
 ?>
 
 <!DOCTYPE html>
-<html style="width: 100%; overflow: hidden">
+<html>
 
 <head>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -18,13 +18,26 @@ $current_page = "watch";
 </head>
 
 <body>
-  <!-- <div class="wrapper"> -->
-    <!-- <div class="content-wrapper"> -->
-      <!-- <div class="content"> -->
-        <video id="stream_video" style="width: 70%; margin: 3% 15%" playsinline controls autoplay></video>
-      <!-- </div> -->
-    <!-- </div> -->
-  <!-- </div> -->
+  <div class="wrapper">
+    <?php
+    include("header.php");
+    ?>
+
+    <div class="content-wrapper">
+
+      <div class="content">
+
+        <video id="stream_video" playsinline controls autoplay></video>
+
+      </div>
+
+    </div>
+
+    <footer class="main-footer">
+      <strong>Copyright &copy; 2019 Screenshare.Pro.</strong> All rights reserved.
+    </footer>
+
+  </div>
 
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
 

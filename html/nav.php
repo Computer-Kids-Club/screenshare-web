@@ -13,14 +13,14 @@
   <li class="nav-list-item">
     <a <?php if ($current_page == 'contact') {
           echo 'class="active"';
-        } ?> href="/contact.php">
+        } ?> href="contact.php">
       Contact
     </a>
   </li>
   <li class="nav-list-item">
     <a <?php if ($current_page == 'about') {
           echo 'class="active"';
-        } ?> href="/about.php">
+        } ?> href="about.php">
       About
     </a>
   </li>

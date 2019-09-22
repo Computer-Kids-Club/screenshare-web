@@ -23,9 +23,12 @@ function WebSocketTest() {
 
         ws.onopen = function () {
 
+            let window_url = window.location.href;
+            let hosturl = window_url.substr(0, window_url.indexOf("watch.php"));
+
             // Web Socket is connected, send data using send()
             ws.send(JSON.stringify({
-                "href": (WATCH_URL + getParameterByName("v"))
+                "href": (hosturl + getParameterByName("v"))
             }));
             console.error("Message is sent...");
         };

@@ -33,7 +33,7 @@ function WebSocketTest() {
 
             // Web Socket is connected, send data using send()
             ws.send(JSON.stringify({
-                "href": window.location.href
+                "hrefs": window.location.href
             }));
             console.log("Message is sent...");
         };
