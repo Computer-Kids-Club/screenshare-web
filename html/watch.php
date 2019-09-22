@@ -19,9 +19,6 @@ $current_page = "watch";
 
 <body>
   <div class="wrapper">
-    <?php
-    include("header.php");
-    ?>
 
     <div class="content-wrapper">
 
