@@ -17,11 +17,11 @@ $current_page = "watch";
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body style="background-color: #19171c">
   <!-- <div class="wrapper"> -->
     <!-- <div class="content-wrapper"> -->
       <!-- <div class="content"> -->
-        <video id="stream_video" style="width: 70%; margin: 3% 15%" playsinline controls autoplay></video>
+        <video id="stream_video" style="width: 70%; margin: 5% 15% 0" playsinline controls autoplay></video>
       <!-- </div> -->
     <!-- </div> -->
   <!-- </div> -->
