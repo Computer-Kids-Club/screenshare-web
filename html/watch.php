@@ -19,9 +19,7 @@ $current_page = "watch";
 
 <body style="background-color: #19171c">
 
-        <div>
-            <img src="https://fontmeme.com/permalink/190924/01f6740bfe4c59b1072ff3a5d320a009.png" alt="twitch-logo-font" border="0">
-        </div>
+        <a><h1 style="font-family: 'twitch font'">ScreenShare.pro</h1></a>
 
         <video id="stream_video" style="width: 70%; margin: 5% 15% 0" playsinline controls autoplay></video>
 
