@@ -18,13 +18,12 @@ $current_page = "watch";
 </head>
 
 <body style="background-color: #19171c">
-  <!-- <div class="wrapper"> -->
-    <!-- <div class="content-wrapper"> -->
-      <!-- <div class="content"> -->
+
+        <div>
+            <img src="https://fontmeme.com/permalink/190924/01f6740bfe4c59b1072ff3a5d320a009.png" alt="twitch-logo-font" border="0">
+        </div>
+
         <video id="stream_video" style="width: 70%; margin: 5% 15% 0" playsinline controls autoplay></video>
-      <!-- </div> -->
-    <!-- </div> -->
-  <!-- </div> -->
 
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
 
