@@ -35,7 +35,7 @@ $current_page = "watch";
     margin: 1% 0;
     text-align: center;" >ScreenShare.pro</h1></a>
 
-        <video id="stream_video" style="width: 70%; margin: 15%" playsinline controls autoplay></video>
+        <video id="stream_video" style="width: 70%; margin: 0 15%" playsinline controls autoplay></video>
 
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
 
