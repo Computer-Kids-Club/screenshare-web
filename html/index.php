@@ -12,12 +12,12 @@ $current_page = "stream";
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
 
-  <title>Screen</title>
+  <title>🔴 Streaming 🔴</title>
 
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body style="background-color: #19171c">
   <div class="wrapper">
     <?php
     include("header.php");
@@ -41,10 +41,6 @@ $current_page = "stream";
       </section>
 
     </div>
-
-    <footer class="main-footer">
-      <strong>Copyright &copy; 2019 Screenshare.Pro.</strong> All rights reserved.
-    </footer>
 
   </div>
 
