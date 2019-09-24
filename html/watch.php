@@ -15,6 +15,16 @@ $current_page = "watch";
   <title>Watch</title>
 
   <link rel="stylesheet" href="css/main.css">
+
+  <style>
+@font-face {
+    font-family: 'twitch font';
+    src: url('dimis___-webfont.woff2') format('woff2'),
+         url('dimis___-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+</style>
 </head>
 
 <body style="background-color: #19171c">
