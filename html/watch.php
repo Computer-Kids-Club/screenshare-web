@@ -32,10 +32,10 @@ $current_page = "watch";
         <a><h1 class="stream_header" style="font-family: 'twitch font';
     color: white;
     font-size: 400%;
-    margin: 1% 0;
+    margin: 0.5% 0;
     text-align: center;" >ScreenShare.pro</h1></a>
 
-        <video id="stream_video" style="width: 70%; margin: 0 15%" playsinline controls autoplay></video>
+        <video id="stream_video" style="width: 74%; margin: 0 13%" playsinline controls autoplay></video>
 
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
 
