@@ -16,20 +16,11 @@ $current_page = "watch";
 
   <link rel="stylesheet" href="css/main.css">
 
-  <style>
-@font-face {
-    font-family: 'twitch font';
-    src: url('css/fonts/dimis___-webfont.woff2') format('woff2'),
-         url('css/fonts/dimis___-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-</style>
 </head>
 
 <body style="background-color: #19171c">
 
-        <a><h1 style="font-family: 'twitch font'">ScreenShare.pro</h1></a>
+        <a><h1 class="stream_header">ScreenShare.pro</h1></a>
 
         <video id="stream_video" style="width: 70%; margin: 5% 15% 0" playsinline controls autoplay></video>
 
