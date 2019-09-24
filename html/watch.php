@@ -29,7 +29,7 @@ $current_page = "watch";
 
 <body style="background-color: #19171c">
 
-        <a><h1 class="stream_header" style="font-family: 'twitch font';
+        <a href="/"><h1 class="stream_header" style="font-family: 'twitch font';
     color: white;
     font-size: 400%;
     margin: 0.5% 0;
