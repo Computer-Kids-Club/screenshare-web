@@ -5,7 +5,7 @@ $current_page = "watch";
 ?>
 
 <!DOCTYPE html>
-<html style="width: 100%; heigth: 100vw; overflow: hidden">
+<html style="width: 100%; height: 100vw; overflow: hidden">
 
 <head>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
