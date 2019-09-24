@@ -19,8 +19,8 @@ $current_page = "watch";
   <style>
 @font-face {
     font-family: 'twitch font';
-    src: url('dimis___-webfont.woff2') format('woff2'),
-         url('dimis___-webfont.woff') format('woff');
+    src: url('css/fonts/dimis___-webfont.woff2') format('woff2'),
+         url('css/fonts/dimis___-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
