@@ -5,7 +5,7 @@ $current_page = "stream";
 ?>
 
 <!DOCTYPE html>
-<html>
+<html style="width: 100%; height: 80vw; overflow: hidden">
 
 <head>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -17,7 +17,7 @@ $current_page = "stream";
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body style="background-color: #19171c">
+<body style="background: radial-gradient(#03fcec, #003d39);">
   <div class="wrapper">
     <?php
     include("header.php");
