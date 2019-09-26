@@ -17,7 +17,13 @@ $current_page = "stream";
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body style="background: radial-gradient(#03fcec, #003d39);">
+<body style="background: #dbe9ff;">
+    <a href="/"><h1 class="stream_header" style="font-family: 'twitch font';
+    color: #3e81ed;
+    font-size: 400%;
+    margin: 0.5% 0;
+    text-align: center;" >ScreenShare.pro</h1></a>
+
   <div class="wrapper">
     <?php
     include("header.php");
@@ -35,7 +41,7 @@ $current_page = "stream";
         <a href="" id="stream_link" target="_blank"></a>
         <br />
 
-        <video id="video" width="512px" autoplay></video>
+        <video id="video" width="512px" autoplay controls playsinline></video>
         <br />
 
       </section>
