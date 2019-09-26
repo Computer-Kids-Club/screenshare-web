@@ -35,8 +35,8 @@ $current_page = "stream";
     text-align: center;" >ScreenShare.pro</h1></a>
 
         <section>
-        <p>You are streaming at: </p>
-        <a href="" id="stream_link" target="_blank"></a>
+        <p style="display: inline; font-family: Segoe UI;">You are streaming at: </p>
+        <a href="" id="stream_link" target="_blank" style="font-family: Segoe UI;"></a>
         <br />
 
         <video id="video" width="512px" autoplay controls playsinline></video>
