@@ -34,12 +34,12 @@ $current_page = "stream";
     margin: 0.5% 0;
     text-align: center;" >ScreenShare.pro</h1></a>
 
-        <section>
+        <section style="margin-top: 3%; margin-left: 10%;">
         <p style="display: inline; font-family: Segoe UI;">You are streaming at: </p>
         <a href="" id="stream_link" target="_blank" style="font-family: Segoe UI;"></a>
         <br />
 
-        <video id="video" width="512px" autoplay controls playsinline></video>
+        <video style="margin-top: 20px; border-style: solid; border-width: 10px; border-image: linear-gradient(#3e81ed, #dbe9ff) 1;" id="video" width="512px" autoplay controls playsinline></video>
         <br />
 
       </section>
