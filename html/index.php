@@ -34,19 +34,7 @@ $current_page = "stream";
     margin: 0.5% 0;
     text-align: center;" >ScreenShare.pro</h1></a>
 
-  <div class="wrapper">
-    <?php
-    include("header.php");
-    ?>
-
-    <div class="content-wrapper">
-      <section class="content-header">
-        <h1>
-          Stream
-        </h1>
-      </section>
-
-      <section class="content">
+        <section>
         <p>You are streaming at: </p>
         <a href="" id="stream_link" target="_blank"></a>
         <br />
@@ -55,10 +43,6 @@ $current_page = "stream";
         <br />
 
       </section>
-
-    </div>
-
-  </div>
 
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
 
