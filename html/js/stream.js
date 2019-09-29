@@ -7,6 +7,9 @@ let mySd = -1;
 let wsOpen = false;
 
 const video = document.querySelector('video');
+const pingTimer = 5000;
+
+let viewerDict = {};
 
 function WebSocketTest() {
 
@@ -73,7 +76,21 @@ function WebSocketTest() {
 
                 startStream(video);
             } else if (obj["ping"]) {
-                setTimeout(function(){ sendMessage( { "pong" : 1 }, obj["from"]); }, 55000);
+                currentTime = (new Date()).getTime();
+                if (obj["from"] in viewerDict) {
+                    for (let key in viewerDict) {
+                        if (obj["from"] == key) {
+                            console.log("SAME KEY");
+                            viewerDict[key] = currentTime;
+                        } else if (currentTime - viewerDict[key] > pingTimer) {
+                            delete viewerDict[key];
+                        }
+                    }
+                } else {
+                    viewerDict[obj["from"]] = currentTime;
+                }
+
+                setTimeout(function(){ sendMessage( { "pong" : 1 }, obj["from"]); }, pingTimer);
             }
         };
 
