@@ -61,17 +61,8 @@ function WebSocketTest() {
                     "watcher": mySd
                 });
 
-                watch_call(sendToStreamer, videoElem).then((result) => {
+                watch_call(sendToStreamer, videoElem, ws, { "ping": 1 }).then((result) => {
                     pc = result;
-                    console.log("doing initial send");
-                    console.log("doing initial send");
-                    console.log("doing initial send");
-                    console.log("doing initial send");
-                    console.log("doing initial send");
-                    console.log("doing initial send");
-                    console.log("doing initial send");
-                    console.log("doing initial send");
-                    sendToStreamer( { "ping": 1 } );
                 });
             } else if (obj["pong"]) {
                 sendToStreamer( { "ping": 1 } );
