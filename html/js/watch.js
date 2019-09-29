@@ -61,7 +61,12 @@ function WebSocketTest() {
                     "watcher": mySd
                 });
 
-                watch_call(sendToStreamer, videoElem).then((result) => pc = result);
+                watch_call(sendToStreamer, videoElem).then((result) => {
+                    pc = result;
+                    sendToStreamer( { "ping": 1 } );
+                });
+            } else if (obj["pong"]) {
+                sendToStreamer( { "ping": 1 } );
             }
         };
 

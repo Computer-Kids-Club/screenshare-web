@@ -29,6 +29,11 @@ function WebSocketTest() {
             }
         }
 
+        function sendMessage(obj, watcherSd) {
+            obj.from = mySd;
+            ws.send("to" + watcherSd + JSON.stringify(obj));
+        }
+
         ws.onopen = function () {
 
             // Web Socket is connected, send data using send()
@@ -52,6 +57,7 @@ function WebSocketTest() {
             let obj = JSON.parse(received_msg);
             if (obj["request_stream"]) {
                 stream_call(sendToWatcher(obj["watcher"])).then((result) => pc_map[obj["watcher"]] = result);
+                
             } else if (obj["desc"]) {
                 on_rtc_signal(pc_map[obj["from"]], obj["desc"], sendToWatcher(obj["from"]));
             } else if (obj["ice_candidate"]) {
@@ -66,6 +72,8 @@ function WebSocketTest() {
                 stream_link.innerText = obj.url;
 
                 startStream(video);
+            } else if (obj["ping"]) {
+                setTimeout(function(){ sendMessage( { "pong" : 1 }, obj["from"]); }, 5000);
             }
         };
 
