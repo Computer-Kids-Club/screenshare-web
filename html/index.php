@@ -43,7 +43,7 @@ $current_page = "stream";
         <br />
 
         <p style="display: inline; font-family: Segoe UI;">Live Viewers: </p>
-        <p style="font-family: Segoe UI;" id="viewer_count">0</p>
+        <p style="display: inline; font-family: Segoe UI;" id="viewer_count">0</p>
 
       </section>
 
