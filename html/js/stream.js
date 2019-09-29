@@ -37,14 +37,8 @@ function WebSocketTest() {
             ws.send("to" + watcherSd + JSON.stringify(obj));
         }
 
-        ws.onopen = function () {
-
-            // Web Socket is connected, send data using send()
-            ws.send(JSON.stringify({
-                "hrefs": window.location.href
-            }));
-
-            setInterval(function() {
+        setInterval(function() {
+            console.log("RUNNING THE FUNCTION");
                 currentTime = (new Date()).getTime();
                 for (let key in viewerDict) {
                     if (currentTime - viewerDict[key] > pingTimer) {
@@ -52,7 +46,15 @@ function WebSocketTest() {
                         delete viewerDict[key];
                     }
                 }
-            }, pingTimer)
+            }, pingTimer);
+
+        ws.onopen = function () {
+
+            // Web Socket is connected, send data using send()
+            ws.send(JSON.stringify({
+                "hrefs": window.location.href
+            }));
+
             console.log("Message is sent...");
         };
 
