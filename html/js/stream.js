@@ -38,13 +38,13 @@ function WebSocketTest() {
         setInterval(function() {
                 currentTime = (new Date()).getTime();
                 for (let key in viewerDict) {
-                    if (currentTime - viewerDict[key] > pingTimer) {
+                    if (currentTime - viewerDict[key] > PINGTIMER) {
                         delete viewerDict[key];
                     }
                 }
 
             document.getElementById("viewer_count").innerHTML = Object.keys(viewerDict).length;
-            }, refreshTimer);
+            }, REFRESHTIMER);
 
         ws.onopen = function () {
 
