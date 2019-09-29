@@ -78,19 +78,22 @@ function WebSocketTest() {
             } else if (obj["ping"]) {
                 currentTime = (new Date()).getTime();
                 if (obj["from"] in viewerDict) {
-                    for (let key in viewerDict) {
-                        if (obj["from"] == key) {
-                            console.log("SAME KEY");
-                            viewerDict[key] = currentTime;
-                        } else if (currentTime - viewerDict[key] > pingTimer) {
-                            delete viewerDict[key];
-                        }
-                    }
+                    viewerDict[obj["from"]] = currentTime;
+                    // for (let key in viewerDict) {
+                    //     if (obj["from"] == key) {
+                    //         viewerDict[key] = currentTime;
+                    //     } else if (currentTime - viewerDict[key] > pingTimer) {
+                    //         delete viewerDict[key];
+                    //     }
+                    // }
                 } else {
                     viewerDict[obj["from"]] = currentTime;
                 }
 
                 setTimeout(function(){ sendMessage( { "pong" : 1 }, obj["from"]); }, pingTimer);
+            } else if (obj["leaving"]) {
+                console.log("DELETING THIS BOI");
+                delete viewerDict[obj["from"]];
             }
         };
 
