@@ -37,7 +37,7 @@ $current_page = "watch";
 
         <video id="stream_video" style="width: 70%; margin: 0 calc(15% - 5px); border-style: solid; border-width: 10px; border-image: linear-gradient(#3e81ed, #dbe9ff) 1;" playsinline controls autoplay></video>
         <br />
-        <p style="display: inline; font-family: Segoe UI;">Live Viewers: </p>
+        <p style="display: inline; font-family: Segoe UI; margin-left: calc(15% - 5px)">Live Viewers: </p>
         <p style="display: inline; font-family: Segoe UI;" id="viewer_count">0</p>
 
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
