@@ -132,6 +132,10 @@ async function watch_call(sendTo, videoView, ws, obj) {
             videoView.play().then((result) => {
             obj.from = mySd;
             ws.send("to" + streamerSd + JSON.stringify(obj));
+        }).catch((result) => {
+            console.log("failed to load video but we still gonna send the message I guess");
+            obj.from = mySd;
+            ws.send("to" + streamerSd + JSON.stringify(obj));
         });
         };
     };
