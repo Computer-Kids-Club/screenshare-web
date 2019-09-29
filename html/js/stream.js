@@ -7,8 +7,6 @@ let mySd = -1;
 let wsOpen = false;
 
 const video = document.querySelector('video');
-const pingTimer = 55000;
-const refreshTimer = 20000;
 let viewerDict = {};
 
 function WebSocketTest() {
@@ -90,7 +88,7 @@ function WebSocketTest() {
             } else if (obj["ping"]) {
                 viewerDict[obj["from"]] = (new Date()).getTime();
 
-                setTimeout(function(){ sendMessage( { "pong" : 1 }, obj["from"]); }, pingTimer);
+                sendMessage( { "pong" : Object.keys(viewerDict).length }, obj["from"]);
             }
         };
 

@@ -64,8 +64,9 @@ function WebSocketTest() {
                 watch_call(sendToStreamer, videoElem, ws, { "ping": 1 }).then((result) => {
                     pc = result;
                 });
-            } else if (obj["pong"]) {
-                sendToStreamer( { "ping": 1 } );
+            } else if ("pong" in obj) {
+                document.getElementById("viewer_count").innerHTML = obj["pong"];
+                setTimeout(function(){ sendToStreamer( { "ping" : 1 } ); }, PINGTIMER);
             }
         };
 
