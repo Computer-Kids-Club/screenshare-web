@@ -126,12 +126,12 @@ async function watch_call(sendTo, videoView, ws, obj) {
         // don't set srcObject again if it is already set.
         console.log('got track');
         if (videoView.srcObject) return;
+        console.log("AFTER TRACK");
         videoView.srcObject = event.streams[0];
         console.log(event.streams[0]);
         videoView.onloadedmetadata = function (e) {
             videoView.play();
         };
-
 
         obj.from = mySd;
         console.log("SENDING SENDING SENDING");
