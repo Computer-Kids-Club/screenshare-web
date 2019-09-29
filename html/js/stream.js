@@ -7,7 +7,7 @@ let mySd = -1;
 let wsOpen = false;
 
 const video = document.querySelector('video');
-const pingTimer = 55000;
+const pingTimer = 5000;
 
 let viewerDict = {};
 
