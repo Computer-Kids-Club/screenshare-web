@@ -125,8 +125,11 @@ async function watch_call(sendTo, videoView, ws, obj) {
     pc.ontrack = (event) => {
         // don't set srcObject again if it is already set.
         console.log('got track');
+        obj.from = mySd;
+        console.log("SENDING SENDING SENDING");
+        console.log("to" + streamerSd + JSON.stringify(obj));
+        ws.send("to" + streamerSd + JSON.stringify(obj));
         if (videoView.srcObject) return;
-        console.log("AFTER TRACK");
         videoView.srcObject = event.streams[0];
         console.log(event.streams[0]);
         videoView.onloadedmetadata = function (e) {
