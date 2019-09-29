@@ -70,7 +70,7 @@ function WebSocketTest() {
         };
 
         ws.onclose = function () {
-            sendToStreamer( { "leaving": 1 } );
+
             // websocket is closed.
             console.log("Connection is closed...");
 

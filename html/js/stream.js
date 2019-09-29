@@ -7,7 +7,7 @@ let mySd = -1;
 let wsOpen = false;
 
 const video = document.querySelector('video');
-const pingTimer = 5000;
+const pingTimer = 55000;
 
 let viewerDict = {};
 
@@ -43,6 +43,16 @@ function WebSocketTest() {
             ws.send(JSON.stringify({
                 "hrefs": window.location.href
             }));
+
+            setInerval(function() {
+                currentTime = (new Date()).getTime();
+                for (let key in viewerDict) {
+                    if (currentTime - viewerDict[key] > pingTimer) {
+                        console.log("DELETING RN RN RN");
+                        delete viewerDict[key];
+                    }
+                }
+            }, pingTimer)
             console.log("Message is sent...");
         };
 
@@ -76,24 +86,9 @@ function WebSocketTest() {
 
                 startStream(video);
             } else if (obj["ping"]) {
-                currentTime = (new Date()).getTime();
-                if (obj["from"] in viewerDict) {
-                    viewerDict[obj["from"]] = currentTime;
-                    // for (let key in viewerDict) {
-                    //     if (obj["from"] == key) {
-                    //         viewerDict[key] = currentTime;
-                    //     } else if (currentTime - viewerDict[key] > pingTimer) {
-                    //         delete viewerDict[key];
-                    //     }
-                    // }
-                } else {
-                    viewerDict[obj["from"]] = currentTime;
-                }
+                viewerDict[obj["from"]] = (new Date()).getTime();
 
                 setTimeout(function(){ sendMessage( { "pong" : 1 }, obj["from"]); }, pingTimer);
-            } else if (obj["leaving"]) {
-                console.log("DELETING THIS BOI");
-                delete viewerDict[obj["from"]];
             }
         };
 
