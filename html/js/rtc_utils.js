@@ -129,7 +129,7 @@ async function watch_call(sendTo, videoView) {
         videoView.srcObject = event.streams[0];
         console.log(event.streams[0]);
         videoView.onloadedmetadata = function (e) {
-            videoView.play();
+            videoView.play().then((result) => {console.log("playing")});
         };
     };
 
