@@ -116,7 +116,7 @@ async function stream_call(sendTo) {
     return pc;
 }
 
-async function watch_call(sendTo, videoView) {
+async function watch_call(sendTo, videoView, ws, obj) {
     console.log('Starting watch calls');
 
     let pc = init_rtc_connection(sendTo);
