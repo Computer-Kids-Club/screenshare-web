@@ -116,7 +116,7 @@ async function stream_call(sendTo) {
     return pc;
 }
 
-async function watch_call(sendTo, videoView, ws, obj) {
+async function watch_call(sendTo, videoView) {
     console.log('Starting watch calls');
 
     let pc = init_rtc_connection(sendTo);
@@ -125,21 +125,12 @@ async function watch_call(sendTo, videoView, ws, obj) {
     pc.ontrack = (event) => {
         // don't set srcObject again if it is already set.
         console.log('got track');
-        obj.from = mySd;
-        console.log("SENDING SENDING SENDING");
-        console.log("to" + streamerSd + JSON.stringify(obj));
-        ws.send("to" + streamerSd + JSON.stringify(obj));
         if (videoView.srcObject) return;
         videoView.srcObject = event.streams[0];
         console.log(event.streams[0]);
         videoView.onloadedmetadata = function (e) {
             videoView.play();
         };
-
-        obj.from = mySd;
-        console.log("SENDING SENDING SENDING");
-        console.log("to" + streamerSd + JSON.stringify(obj));
-        ws.send("to" + streamerSd + JSON.stringify(obj));
     };
 
     return pc;
