@@ -73,6 +73,7 @@ function WebSocketTest() {
 
                 startStream(video);
             } else if (obj["ping"]) {
+                console.log("Sending ping out in 5");
                 setTimeout(function(){ sendMessage( { "pong" : 1 }, obj["from"]); }, 5000);
             }
         };
