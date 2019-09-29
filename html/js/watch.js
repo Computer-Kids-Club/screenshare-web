@@ -63,6 +63,14 @@ function WebSocketTest() {
 
                 watch_call(sendToStreamer, videoElem).then((result) => {
                     pc = result;
+                    console.log("doing initial send");
+                    console.log("doing initial send");
+                    console.log("doing initial send");
+                    console.log("doing initial send");
+                    console.log("doing initial send");
+                    console.log("doing initial send");
+                    console.log("doing initial send");
+                    console.log("doing initial send");
                     sendToStreamer( { "ping": 1 } );
                 });
             } else if (obj["pong"]) {
