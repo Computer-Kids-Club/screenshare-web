@@ -44,7 +44,7 @@ function WebSocketTest() {
                 "hrefs": window.location.href
             }));
 
-            setInerval(function() {
+            setInterval(function() {
                 currentTime = (new Date()).getTime();
                 for (let key in viewerDict) {
                     if (currentTime - viewerDict[key] > pingTimer) {
