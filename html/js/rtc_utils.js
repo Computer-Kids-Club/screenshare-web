@@ -131,8 +131,6 @@ async function watch_call(sendTo, videoView, ws, obj) {
         videoView.onloadedmetadata = function (e) {
             videoView.play().then((result) => {
             obj.from = mySd;
-            console.log("SENDING SENDING SENDING");
-            console.log("to" + streamerSd + JSON.stringify(obj));
             ws.send("to" + streamerSd + JSON.stringify(obj));
         });
         };
