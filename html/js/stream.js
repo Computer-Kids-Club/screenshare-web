@@ -38,15 +38,14 @@ function WebSocketTest() {
         }
 
         setInterval(function() {
-            console.log("RUNNING THE FUNCTION");
-            console.log(viewerDict);
                 currentTime = (new Date()).getTime();
                 for (let key in viewerDict) {
                     if (currentTime - viewerDict[key] > pingTimer) {
-                        console.log("DELETING RN RN RN");
                         delete viewerDict[key];
                     }
                 }
+
+            document.getElementById("viewer_count").innerHTML = Object.keys(viewerDict).length;
             }, pingTimer);
 
         ws.onopen = function () {

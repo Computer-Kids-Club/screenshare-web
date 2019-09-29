@@ -42,6 +42,9 @@ $current_page = "stream";
         <video style="margin-top: 20px; border-style: solid; border-width: 10px; border-image: linear-gradient(#3e81ed, #dbe9ff) 1;" id="video" width="512px" autoplay controls playsinline></video>
         <br />
 
+        <p>Live Viewers: </p>
+        <p id="viewer_count"></p>
+
       </section>
 
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
