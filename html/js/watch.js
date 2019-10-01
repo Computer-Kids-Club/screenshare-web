@@ -5,7 +5,7 @@ let pc;
 let mySd = -1;
 let streamerSd = -1;
 
-let viewMsg = true;
+let viewMsg = false;
 const videoElem = document.getElementById("stream_video");
 
 function WebSocketTest() {
@@ -43,7 +43,6 @@ function WebSocketTest() {
             if (received_msg[0] == 't') {
                 received_msg = received_msg.substring(received_msg.indexOf("{"));
             }
-            console.log(received_msg);
 
             // {"watcher":5,"streamer":4}
 
