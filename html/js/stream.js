@@ -36,6 +36,12 @@ function WebSocketTest() {
         }
 
         setInterval(function() {
+            if (Object.keys(viewerDict).length <= 0) {
+                sendMessage( { "pong" : 0 }, "NO_ONE");
+            }
+        }, PINGTIMER);
+
+        setInterval(function() {
                 currentTime = (new Date()).getTime();
                 for (let key in viewerDict) {
                     if (currentTime - viewerDict[key] > PINGTIMER) {
